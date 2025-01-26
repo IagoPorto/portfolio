@@ -1,5 +1,5 @@
 export function Menu() {
-    const menuItems = ["About", "Experience", "Projects"];
+    const menuItems = ["ABOUT", "EXPERIENCE", "PROJECTS"];
 
     return (
         <nav className="menu">

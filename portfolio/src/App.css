@@ -1,6 +1,7 @@
 /* Estilos generales */
 body {
-  background-color: #4a5b6e;
+  /*background-color: #4a5b6e;*/
+  background-color: #425366;
   color: #f5efee;
   font-family: system-ui;
   font-size: 20px;
@@ -27,28 +28,38 @@ main {
 .left-section {
   padding: 20px;
   margin: 0 70px;
-  align-items: center;
+  max-width: 33%;
   position: fixed;
   justify-content: center;
   padding: 20px;
   color: white;
   display: flex;
   flex-direction: column;
+  text-align:left;
 }
 
+.left-section ul {
+  list-style-type: none; 
+  padding-left: 0;
+  margin-left: 0;
+  text-align: left;
+}
+
+
 .presentation h1,
-.presentation h2,
-.presentation p {
+.presentation h2{
   margin-bottom: 10px;
-  max-width: 800px;
+}
+
+.presentation p{
+  margin-bottom: 100px;
 }
 
 .menu-item {
-  color: #9ec1cc;
+  color: #f5efee;
   text-decoration: none;
-  margin-left: -400px;
   font-size: 18px;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;   
 }
 
 .menu-item:hover {
@@ -65,20 +76,27 @@ main {
 }
 
 @media (max-width: 768px) {
-
   .menu {
     display: none;
   }
 
   main {
-    flex-direction: column; 
+    flex-direction: column;
+    padding: 20px;
   }
 
   .left-section {
-    display: none;
+    display: flex;
+    width: 100%;
+    max-width:100%;
+    position: relative;
+    margin-left: 0px;
+    margin-right:0px;
   }
 
   .right-section {
     width: 100%;
+    margin-left: 0;
   }
 }
+
