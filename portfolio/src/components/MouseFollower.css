@@ -1,13 +1,13 @@
 
 .mouse-follower {
     position: absolute;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 50%);
-    border-radius: 50%;
-    opacity: 0.9;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 100%;
+    opacity: 0.3;
     pointer-events: none;
-    width: 500px;
-    height: 500px;
-    left: -250px;
-    top: -250px;
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    top: -400px;
     transition: transform 0.1s ease-out; 
   }
