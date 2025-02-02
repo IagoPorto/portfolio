@@ -1,5 +1,3 @@
-// Projects.jsx
-import React from 'react';
 import './Projects.css'; // Asegúrate de crear este archivo para los estilos
 
 export function Projects() {

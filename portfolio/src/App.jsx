@@ -4,25 +4,30 @@ import { Menu } from './components/Menu.jsx';
 import { About } from './components/About.jsx';
 import { Experience } from './components/Experience.jsx';
 import { Projects } from './components/Projects.jsx';
+import Globe3D from './components/Globe3D.jsx';
 import './App.css';
 import NoiseBackground from './components/NoiseBackground.jsx';
 
 function App() {
   return (
-    <main>
+    <>
       <MouseFollower />
       <NoiseBackground />
-      <aside className="left-section">
-        <Presentation />
-        <Menu />
-      </aside>
-      <section className ="right-section">
-        <About />
-        <Experience />
-        <Projects />
-      </section>
-    </main>
+      <div className="layout-container">
+        <aside className="left-section">
+          <Presentation />
+          <Menu />
+          <Globe3D />
+        </aside>
+        <section className="right-section">
+          <About />
+          <Experience />
+          <Projects />
+        </section>
+      </div>
+    </>
   );
 }
+
 
 export default App;

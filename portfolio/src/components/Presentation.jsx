@@ -1,6 +1,6 @@
 export function Presentation() {
     return (
-        <section class="presentation">
+        <section className="presentation">
             <h1>Iago Porto</h1>
             <h2>Software Engineer</h2>
             <p>

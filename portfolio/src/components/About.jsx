@@ -1,8 +1,6 @@
-import './About.css'
-
 export function About() {
     return (
-        <section className="about">
+        <section>
             <h2>About Me</h2>
             <p>
                 Hi! I’m Iago Porto, a passionate software engineer with experience in developing web and mobile applications. I specialize in technologies like JavaScript, React, and Node.js, and I enjoy building efficient, scalable solutions to solve real-world problems.
