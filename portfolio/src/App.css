@@ -4,6 +4,18 @@ body {
   font-size: 15px;
 }
 
+.menu-item {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-item.active {
+  color: #f8cdc6; /* Color destacado */
+  font-weight: bold;
+}
+
+
 h1 {
   color: #f5efee;
   font-size: 60px;
