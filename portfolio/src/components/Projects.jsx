@@ -3,7 +3,7 @@ import './Projects.css'; // Asegúrate de crear este archivo para los estilos
 export function Projects() {
     return (
         <section className="projects" id="projects">
-            <h2>Proyectos Destacados</h2>
+            <h2 className="section-title">Proyectos Destacados</h2>
             <div className="project">
                 <h3>[Nombre del Proyecto]</h3>
                 <p><strong>Descripción:</strong> Breve descripción del proyecto, sus objetivos y resultados.</p>

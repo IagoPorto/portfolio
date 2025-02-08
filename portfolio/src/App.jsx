@@ -5,6 +5,7 @@ import { About } from './components/About.jsx';
 import { Experience } from './components/Experience.jsx';
 import { Projects } from './components/Projects.jsx';
 import Globe3D from './components/Globe3D.jsx';
+import ContactIcons from './components/ContactIcons.jsx';
 import './App.css';
 import NoiseBackground from './components/NoiseBackground.jsx';
 
@@ -18,6 +19,7 @@ function App() {
           <Presentation />
           <Menu />
           <Globe3D />
+          <ContactIcons />
         </aside>
         <section className="right-section">
           <About />

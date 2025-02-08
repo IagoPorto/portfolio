@@ -3,7 +3,7 @@ import './Experience.css'; // Asegúrate de crear este archivo para los estilos
 export function Experience() {
     return (
         <section className="experience" id="experience">
-            <h2>Experiencia Profesional</h2>
+            <h2 className="section-title">Experiencia Profesional</h2>
             <div className="job">
                 <h3>Ingeniero de Software en [Nombre de la Empresa]</h3>
                 <p><strong>Período:</strong> [Mes Año] - Presente</p>
