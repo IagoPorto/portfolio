@@ -105,11 +105,11 @@ const Globe3D = () => {
 
   // Manejadores de eventos para hover
   const handleMouseEnter = () => {
-    rotationSpeedRef.current = 0.05; // Velocidad más rápida
+    rotationSpeedRef.current = 0.04; // Velocidad más rápida
   };
 
   const handleMouseLeave = () => {
-    rotationSpeedRef.current = 0.01; // Velocidad normal
+    rotationSpeedRef.current = 0.005; // Velocidad normal
   };
 
   return (
