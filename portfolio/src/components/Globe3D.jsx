@@ -7,8 +7,8 @@ const Globe3D = () => {
   const mountRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
-  const modelRef = useRef(null); // Almacena el modelo 3D
-  const rotationSpeedRef = useRef(0.01);
+  const modelRef = useRef(null); // Saved the 3D model
+  const rotationSpeedRef = useRef(0.005);
 
   useEffect(() => {
     const currentMount = mountRef.current;
@@ -31,7 +31,7 @@ const Globe3D = () => {
     scene.add(ambientLight);
 
     const directionalLight = new THREE.DirectionalLight(0xf8cdc6, 1);
-    directionalLight.position.set(0, 1, 1);
+    directionalLight.position.set(1, 1, 1);
     scene.add(directionalLight);
 
     const cubeTextureLoader = new THREE.CubeTextureLoader();
@@ -113,11 +113,12 @@ const Globe3D = () => {
   return (
     <div
       ref={mountRef}
-      style={{ width: '100%', height: '600px' }}
+      style={{ width: '100%', height: '50vh', maxHeight: '600px', minHeight: '300px' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     />
   );
+  
 };
 
 export default Globe3D;

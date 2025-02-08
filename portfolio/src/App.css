@@ -19,7 +19,8 @@ body {
   display: flex;
   justify-content: left;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: auto; 
+  margin-bottom: 10%;
 }
 
 .icon {
@@ -77,6 +78,7 @@ strong, h2 {
 .left-section {
   position: fixed;
   top: 0;
+  left: 0;
   margin-left: 15%;
   margin-right: 2%;
   width: 33%;
@@ -85,7 +87,10 @@ strong, h2 {
   display: flex;
   flex-direction: column;
   text-align: left;
+  height: 100vh; /* Asegura que la sección ocupa toda la pantalla */
+  justify-content: space-between; /* Empuja los iconos hacia abajo */
 }
+
 
 .right-section {
   margin-left: 50%;
