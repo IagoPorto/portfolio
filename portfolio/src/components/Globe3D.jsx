@@ -7,8 +7,8 @@ const Globe3D = () => {
   const mountRef = useRef(null);
   const cameraRef = useRef(null);
   const rendererRef = useRef(null);
-  const rotationSpeedRef = useRef(0.01); // Velocidad normal de rotación
-  let model = null;
+  const modelRef = useRef(null); // Almacena el modelo 3D
+  const rotationSpeedRef = useRef(0.01);
 
   useEffect(() => {
     const currentMount = mountRef.current;
@@ -62,15 +62,15 @@ const Globe3D = () => {
           }
         });
 
-        model = object;
+        modelRef.current = object; // Guardar el modelo en useRef
         scene.add(object);
       });
     });
 
     const animate = () => {
       requestAnimationFrame(animate);
-      if (model) {
-        model.rotation.y += rotationSpeedRef.current;
+      if (modelRef.current) {
+        modelRef.current.rotation.y += rotationSpeedRef.current;
       }
       renderer.render(scene, camera);
     };
@@ -89,7 +89,6 @@ const Globe3D = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(newWidth, newHeight);
 
-      // Ajustar la posición de la cámara para mantener la escala
       camera.position.z = Math.max(5, 7 * (1000 / newWidth));
     };
 
@@ -103,13 +102,12 @@ const Globe3D = () => {
     };
   }, []);
 
-  // Manejadores de eventos para hover
   const handleMouseEnter = () => {
-    rotationSpeedRef.current = 0.04; // Velocidad más rápida
+    rotationSpeedRef.current = 0.04;
   };
 
   const handleMouseLeave = () => {
-    rotationSpeedRef.current = 0.005; // Velocidad normal
+    rotationSpeedRef.current = 0.005;
   };
 
   return (

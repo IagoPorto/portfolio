@@ -130,6 +130,12 @@ strong, h2 {
     display: none;
   }
   
+  .contact-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15%;
+  }
+
   .layout-container {
     flex-direction: column;
   }
