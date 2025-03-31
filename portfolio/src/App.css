@@ -1,7 +1,7 @@
 body {
   color: #f5efee;
   font-family: system-ui;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .menu-item {
@@ -138,7 +138,8 @@ strong, h2 {
   .contact-icons {
     display: flex;
     justify-content: center;
-    margin-bottom: 15%;
+    margin-top: 0;
+    margin-bottom: 15px;
   }
 
   .layout-container {
