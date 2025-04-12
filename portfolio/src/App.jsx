@@ -2,7 +2,7 @@ import { MouseFollower } from './components/MouseFollower.jsx';
 import { Presentation } from './components/Presentation.jsx';
 import { Menu } from './components/Menu.jsx';
 import { About } from './components/About.jsx';
-import { Experience } from './components/Experience.jsx';
+import { ExperienceSection } from './components/ExperienceSection.jsx';
 import { Projects } from './components/Projects.jsx';
 import Globe3D from './components/Globe3D.jsx';
 import ContactIcons from './components/ContactIcons.jsx';
@@ -23,7 +23,7 @@ function App() {
         </aside>
         <section className="right-section">
           <About />
-          <Experience />
+          <ExperienceSection />
           <Projects />
         </section>
       </div>
