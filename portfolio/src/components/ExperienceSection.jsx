@@ -1,4 +1,4 @@
-import './Experience.css'; // Asegúrate de crear este archivo para los estilos
+import './ExperienceSection.css'; // Asegúrate de crear este archivo para los estilos
 import { Experience } from './Experience';
 
 export function ExperienceSection() {

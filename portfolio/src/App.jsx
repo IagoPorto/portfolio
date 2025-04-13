@@ -3,7 +3,7 @@ import { Presentation } from './components/Presentation.jsx';
 import { Menu } from './components/Menu.jsx';
 import { About } from './components/About.jsx';
 import { ExperienceSection } from './components/ExperienceSection.jsx';
-import { Projects } from './components/Projects.jsx';
+import { ProjectsSection } from './components/ProjectsSection.jsx';
 import Globe3D from './components/Globe3D.jsx';
 import ContactIcons from './components/ContactIcons.jsx';
 import './App.css';
@@ -24,7 +24,7 @@ function App() {
         <section className="right-section">
           <About />
           <ExperienceSection />
-          <Projects />
+          <ProjectsSection />
         </section>
       </div>
     </>
