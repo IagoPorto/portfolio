@@ -1,16 +1,15 @@
-export function Experience() {
+export function Experience({ companyName, companyUrl, position, initDate, finalDate, details }) {
     return(
-        <div className="job">
-            <h3>Ingeniero de Software en [Nombre de la Empresa]</h3>
-            <p><strong>Período:</strong> [Mes Año] - Presente</p>
-            <p>
-                Descripción de tus responsabilidades y logros en esta posición. Por ejemplo:
-            </p>
-                <ul>
-                    <li>Desarrollo de aplicaciones web utilizando React y Node.js.</li>
-                    <li>Implementación de soluciones escalables y eficientes.</li>
-                    <li>Colaboración con equipos multidisciplinarios para mejorar la experiencia del usuario.</li>
-                </ul>
+         <div className="job">
+            <h3>
+                {position} at <a>{companyName}</a>
+            </h3>
+            <p>{initDate} – {finalDate}</p>
+            <ul>
+                {details.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
         </div>
     );
 }
