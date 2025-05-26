@@ -11,7 +11,7 @@ body {
 }
 
 .menu-item.active {
-  color: #f8cdc6; /* Color destacado */
+  color: #f8cdc6;
   font-weight: bold;
 }
 
@@ -100,6 +100,7 @@ strong, h2 {
   display: flex;
   flex-direction: column;
   text-align: left;
+  z-index: 1;
 }
 
 .left-section ul {

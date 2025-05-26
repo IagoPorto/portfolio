@@ -17,6 +17,7 @@ body {
     animation: bg-animation .2s infinite;
     opacity: .9;
     visibility: visible;
+    z-index: 0;
   }
   
   @keyframes bg-animation {

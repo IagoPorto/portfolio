@@ -1,0 +1,11 @@
+.job a {
+  font-size: 1.5rem;
+  color: #f5efee;
+  transition: transform 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.job a:hover {
+  transform: scale(1.2);
+  color: #f8cdc6;
+}
