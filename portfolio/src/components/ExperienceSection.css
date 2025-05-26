@@ -17,6 +17,6 @@
 }
 
 .experience > .job + .job {
-  padding-top: 2rem;           /* espacio arriba de cada job excepto el primero */
-  border-top: 1px solid rgba(255,255,255,0.2); /* línea opcional para más claridad */
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
 }
