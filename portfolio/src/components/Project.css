@@ -1,0 +1,6 @@
+.project-photo {
+  width: 600px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}

@@ -25,6 +25,7 @@ function App() {
           <About />
           <ExperienceSection />
           <ProjectsSection />
+          <Footer />
         </section>
       </div>
     </>
