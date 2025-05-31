@@ -3,7 +3,6 @@ body {
   font-family: system-ui;
   font-size: 17px;
 }
-
 .menu-item {
   color: #f5efee;
   text-decoration: none;
@@ -37,6 +36,9 @@ body {
 
 section {
   margin-bottom: 20%;
+}
+.right-section > section:last-of-type {
+  margin-bottom: 0;
 }
 
 .presentation {

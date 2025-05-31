@@ -1,19 +1,19 @@
-/* .footer {
-  padding: 20px 0;
+.footer {
+  margin-top: 200px;
+  margin-bottom: 7%;
   text-align: center;
 }
 
-.content {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px;
+.footer-text {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
 }
 
-.links a {
-  margin: 0 10px;
-  text-decoration: none;
+.icon {
+  margin: 0 0.25em;
+  vertical-align: middle;
+  font-size: 1.1em;
 }
-
-.links a:hover {
-  text-decoration: underline;
-} */

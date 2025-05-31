@@ -6,6 +6,7 @@ import { ExperienceSection } from './components/ExperienceSection.jsx';
 import { ProjectsSection } from './components/ProjectsSection.jsx';
 import Globe3D from './components/Globe3D.jsx';
 import ContactIcons from './components/ContactIcons.jsx';
+import Footer from './components/Footer.jsx'
 import './App.css';
 import NoiseBackground from './components/NoiseBackground.jsx';
 
@@ -21,12 +22,12 @@ function App() {
           <Globe3D />
           <ContactIcons />
         </aside>
-        <section className="right-section">
+        <div className="right-section">
           <About />
           <ExperienceSection />
           <ProjectsSection />
           <Footer />
-        </section>
+        </div>
       </div>
     </>
   );
