@@ -1,16 +1,28 @@
 export function About() {
-    return (
-        <section id="about">
-            <h2 className="section-title">About Me</h2>
-            <p>
-                Hi! I’m Iago Porto, a passionate software engineer with experience in developing web and mobile applications. I specialize in technologies like JavaScript, React, and Node.js, and I enjoy building efficient, scalable solutions to solve real-world problems.
-            </p>
-            <p>
-                Throughout my career, I’ve worked on diverse projects ranging from startups to large corporations, always focusing on code quality and user satisfaction. My goal is to keep learning and adapting to new technological trends to deliver the best results in every project.
-            </p>
-            <p>
-                When I’m not coding, I enjoy participating in tech communities, attending conferences, and contributing to open-source projects. I strongly believe in the power of collaboration and continuous learning.
-            </p>
-        </section>
-    );
+  return (
+    <section id="about">
+      <h2 className="section-title">About Me</h2>
+
+      <p>
+        I'm Iago Porto, a software engineer who loves turning complex requirements into
+        smooth-running systems. Tech stack? I'm tool-agnostic; whether it's Java/Spring, Django or
+        PostgreSQL, I'll pick what fits the task. Early on, I started out tinkering with small projects;
+        now I help design and maintain full-stack platforms for automotive testing and industrial automation.
+      
+      </p>
+
+      <p>
+        In my roles at Technica Engineering and Imatia, I've rolled out new features, set up CI/CD pipelines,
+        and bridged backend services with React, JavaFX or Android frontends. Along the way, I've optimized
+        SQL queries, containerized workflows, and even refined user interfaces—always aiming for reliability
+        and a clean developer experience.
+      </p>
+
+      <p>
+        I work best in agile teams where collaboration and continuous improvement come first. Whether it's
+        refactoring legacy code, sketching out microservices or experimenting with hexagonal architecture,
+        I'm driven by solving real-world problems and learning the next best practice.
+      </p>
+    </section>
+);
 }

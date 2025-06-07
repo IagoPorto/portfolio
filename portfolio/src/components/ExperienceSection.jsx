@@ -1,44 +1,44 @@
-import './ExperienceSection.css'; // Asegúrate de crear este archivo para los estilos
+import './ExperienceSection.css';
 import { Experience } from './Experience';
 
 export function ExperienceSection() {
-    return (
-        <section className="experience" id="experience">
-            <h2 className="section-title">Experience</h2>
-            <Experience
-                position="Software Engineer"
-                companyName="Technica Engineering"
-                companyUrl="https://www.technica-engineering.de/"
-                initDate="April 2025"
-                finalDate="Present"
-                details={[
-                    "Developed a full-stack web server for automotive testing workflows with a Django (Python) backend and a React frontend (JavaScript/TypeScript).",
-                    "Integrated the backend with Jenkins to trigger vehicle testing jobs directly from the web interface.",
-                    "Designed and implemented CI/CD pipelines using GitLab, improving deployment and testing across environments.",
-                    "Led the migration from Docker containers to native Windows execution for better compatibility with automotive test benches.",
-                    "Proposed and implemented UX/UI improvements to enhance usability for engineers.",
-                    "Wrote unit tests in both Python (pytest) and React (Vitest, Testing Library) to ensure system reliability.",
-                    "Worked in an agile Scrum team: sprint planning, daily stand-ups, and code reviews.",
-                    "Contributed to bridging software with real-world automotive testing systems."
-                ]}
-            />
-            <Experience
-                position="Software Engineer"
-                companyName="Imatia Innovation"
-                companyUrl="https://www.imatia.com/"
-                initDate="May 2023"
-                finalDate="March 2025"
-                details={[
-                    "Developed backend features using Java and Spring, including REST APIs and event-driven architecture.",
-                    "Refactored legacy components to improve performance and maintainability.",
-                    "Optimized SQL queries and managed database performance using Liquibase for version control.",
-                    "Integrated automated systems such as truck inbound/outbound management and telecom equipment tools for public administration.",
-                    "Contributed to frontend development of desktop and Android applications, building monitoring panels and visualizing system data.",
-                    "Designed and implemented a SCADA-like system to monitor devices in industrial truck scale systems using JavaFX.",
-                    "Created a license plate OCR system in C++ and integrated it as a microservice with a REST API and Oracle SQL persistence.",
-                    "Improved Android apps and reduced SQL query execution times by over 50%."
-                ]}
-            />
-        </section>
-    );
+  return (
+    <section className="experience" id="experience">
+      <h2 className="section-title">Experience</h2>
+
+      <Experience
+        position="Software Engineer"
+        companyName="Technica Engineering Spain"
+        companyUrl="https://www.technica-engineering.de/"
+        initDate="April 2025"
+        finalDate="Present"
+        details={[
+          "Built a full-stack platform for automotive testing with Django on the backend and React on the frontend.",
+          "Wired Jenkins pipelines into the UI so engineers can launch vehicle tests with one click.",
+          "Set up GitLab CI/CD flows that eliminated manual steps and accelerated our release cadence.",
+          "Swapped container-based deployments for native Windows execution to simplify test-bench integration.",
+          "Partnered with UX designers and test engineers to streamline interfaces and workflows.",
+          "Backed everything up with unit and integration tests (pytest & Vitest) for rock-solid reliability.",
+          "Owned Scrum ceremonies, sprint planning, daily stand-ups, retrospectives and drove code reviews."
+        ]}
+      />
+
+      <Experience
+        position="Software Engineer"
+        companyName="Imatia Innovation"
+        companyUrl="https://www.imatia.com/"
+        initDate="May 2023"
+        finalDate="March 2025"
+        details={[
+          "Designed and deployed Java/Spring microservices and REST APIs for industrial automation.",
+          "Refactored legacy modules, boosting performance and easing future maintenance.",
+          "Fine-tuned Oracle & PostgreSQL queries and managed schema changes via Liquibase.",
+          "Automated truck logistics and hooked up telecom-admin tools for public-sector clients.",
+          "Built real-time monitoring panels in JavaFX and Android to visualize system health.",
+          "Developed a C++ OCR microservice for license-plate detection, integrated via Spring.",
+          "Cut SQL runtimes by over 50% and polished Android app workflows for better UX."
+        ]}
+      />
+    </section>
+  );
 }
