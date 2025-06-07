@@ -13,6 +13,10 @@ jobs:
     name: ESLint & Prettier
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: portfolio
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
