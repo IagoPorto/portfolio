@@ -1,0 +1,32 @@
+name: CI - lint & format checks
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  lint-and-format:
+    name: ESLint & Prettier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint (check only)
+        run: npm run lint:check
+
+      - name: Run Prettier (check only)
+        run: npm run format:check
