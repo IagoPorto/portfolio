@@ -1,5 +1,5 @@
-import './ExperienceSection.css';
-import { Experience } from './Experience';
+import "./ExperienceSection.css";
+import { Experience } from "./Experience";
 
 export function ExperienceSection() {
   return (
@@ -19,7 +19,7 @@ export function ExperienceSection() {
           "Swapped container-based deployments for native Windows execution to simplify test-bench integration.",
           "Partnered with UX designers and test engineers to streamline interfaces and workflows.",
           "Backed everything up with unit and integration tests (pytest & Vitest) for rock-solid reliability.",
-          "Owned Scrum ceremonies, sprint planning, daily stand-ups, retrospectives and drove code reviews."
+          "Owned Scrum ceremonies, sprint planning, daily stand-ups, retrospectives and drove code reviews.",
         ]}
       />
 
@@ -36,7 +36,7 @@ export function ExperienceSection() {
           "Automated truck logistics and hooked up telecom-admin tools for public-sector clients.",
           "Built real-time monitoring panels in JavaFX and Android to visualize system health.",
           "Developed a C++ OCR microservice for license-plate detection, integrated via Spring.",
-          "Cut SQL runtimes by over 50% and polished Android app workflows for better UX."
+          "Cut SQL runtimes by over 50% and polished Android app workflows for better UX.",
         ]}
       />
     </section>

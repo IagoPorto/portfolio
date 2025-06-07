@@ -11,7 +11,10 @@ export function Menu() {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 3 && rect.bottom >= window.innerHeight / 3) {
+          if (
+            rect.top <= window.innerHeight / 3 &&
+            rect.bottom >= window.innerHeight / 3
+          ) {
             currentSection = id;
           }
         }

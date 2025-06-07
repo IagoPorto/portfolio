@@ -1,31 +1,31 @@
 .projects h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .project {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .project h3 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
+  font-size: 1.5em;
+  margin-bottom: 5px;
 }
 
 .project p {
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
 .project a {
-    color: #f5efee;
-    text-decoration: none;
+  color: #f5efee;
+  text-decoration: none;
 }
 
 .project a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .projects > .project + .project {
   padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }

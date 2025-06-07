@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: left;
   gap: 20px;
-  margin-top: auto; 
+  margin-top: auto;
   margin-bottom: 10%;
 }
 
@@ -32,7 +32,6 @@ body {
   transform: scale(1.2);
   color: #f8cdc6;
 }
-
 
 section {
   margin-bottom: 20%;
@@ -63,7 +62,8 @@ h2 {
   margin-top: 20px;
 }
 
-strong, h2 {
+strong,
+h2 {
   color: #f8cdc6;
 }
 
@@ -92,7 +92,6 @@ strong, h2 {
   height: 100vh; /* Asegura que la sección ocupa toda la pantalla */
   justify-content: space-between; /* Empuja los iconos hacia abajo */
 }
-
 
 .right-section {
   margin-left: 50%;
@@ -173,5 +172,3 @@ strong, h2 {
     margin-bottom: 16px;
   }
 }
-
-

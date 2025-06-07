@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
-import * as THREE from 'three';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
+import { useEffect, useRef } from "react";
+import * as THREE from "three";
+import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
 const Globe3D = () => {
   const mountRef = useRef(null);
@@ -36,17 +36,21 @@ const Globe3D = () => {
 
     const cubeTextureLoader = new THREE.CubeTextureLoader();
     const envMap = cubeTextureLoader.load([
-      '/env/px.jpg', '/env/nx.jpg', '/env/py.jpg',
-      '/env/ny.jpg', '/env/pz.jpg', '/env/nz.jpg'
+      "/env/px.jpg",
+      "/env/nx.jpg",
+      "/env/py.jpg",
+      "/env/ny.jpg",
+      "/env/pz.jpg",
+      "/env/nz.jpg",
     ]);
     scene.environment = envMap;
 
     const mtlLoader = new MTLLoader();
-    mtlLoader.load('/3D/cube.mtl', (materials) => {
+    mtlLoader.load("/3D/cube.mtl", (materials) => {
       materials.preload();
       const objLoader = new OBJLoader();
       objLoader.setMaterials(materials);
-      objLoader.load('/3D/cube.obj', (object) => {
+      objLoader.load("/3D/cube.obj", (object) => {
         object.scale.set(0.02, 0.02, 0.02);
 
         const box = new THREE.Box3().setFromObject(object);
@@ -57,7 +61,10 @@ const Globe3D = () => {
         object.traverse((child) => {
           if (child.isMesh) {
             child.material = new THREE.MeshStandardMaterial({
-              color: 0x9ec1cc, metalness: 0.9, roughness: 0.1, envMap: envMap
+              color: 0x9ec1cc,
+              metalness: 0.9,
+              roughness: 0.1,
+              envMap: envMap,
             });
           }
         });
@@ -78,7 +85,8 @@ const Globe3D = () => {
     animate();
 
     const handleResize = () => {
-      if (!mountRef.current || !cameraRef.current || !rendererRef.current) return;
+      if (!mountRef.current || !cameraRef.current || !rendererRef.current)
+        return;
 
       const newWidth = mountRef.current.clientWidth;
       const newHeight = mountRef.current.clientHeight;
@@ -92,11 +100,11 @@ const Globe3D = () => {
       camera.position.z = Math.max(5, 7 * (1000 / newWidth));
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       currentMount.removeChild(renderer.domElement);
       renderer.dispose();
     };
@@ -113,12 +121,16 @@ const Globe3D = () => {
   return (
     <div
       ref={mountRef}
-      style={{ width: '100%', height: '50vh', maxHeight: '600px', minHeight: '300px' }}
+      style={{
+        width: "100%",
+        height: "50vh",
+        maxHeight: "600px",
+        minHeight: "300px",
+      }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     />
   );
-  
 };
 
 export default Globe3D;

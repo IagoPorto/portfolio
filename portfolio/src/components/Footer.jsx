@@ -1,4 +1,4 @@
-import './Footer.css'
+import "./Footer.css";
 import { FaHeart } from "react-icons/fa";
 
 export default function Footer() {
