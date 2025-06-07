@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 
+const MENU_ITEMS = ["about", "experience", "projects"];
+
 export function Menu() {
-  const menuItems = ["about", "experience", "projects"];
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       let currentSection = "";
-      menuItems.forEach((id) => {
+      MENU_ITEMS.forEach((id) => {
         const section = document.getElementById(id);
         if (section) {
           const rect = section.getBoundingClientRect();
@@ -24,10 +25,10 @@ export function Menu() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, []); // no missing deps now
 
   const handleClick = (id, event) => {
-    event.preventDefault(); // Evita el comportamiento por defecto del enlace
+    event.preventDefault();
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -37,7 +38,7 @@ export function Menu() {
   return (
     <nav className="menu">
       <ul>
-        {menuItems.map((id) => (
+        {MENU_ITEMS.map((id) => (
           <li key={id}>
             <a
               href={`#${id}`}

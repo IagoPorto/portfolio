@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import "./Project.css";
 
 export function Project({ name, description, url, photos = [], tecnologies }) {
@@ -30,3 +31,15 @@ export function Project({ name, description, url, photos = [], tecnologies }) {
     </div>
   );
 }
+
+Project.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  photos: PropTypes.arrayOf(PropTypes.string),
+  tecnologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+Project.defaultProps = {
+  photos: [],
+};

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Experience.css";
 
 export function Experience({
@@ -27,3 +28,12 @@ export function Experience({
     </div>
   );
 }
+
+Experience.propTypes = {
+  companyName: PropTypes.string.isRequired,
+  companyUrl: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  initDate: PropTypes.string.isRequired,
+  finalDate: PropTypes.string.isRequired,
+  details: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
