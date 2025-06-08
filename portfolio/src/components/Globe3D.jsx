@@ -45,7 +45,7 @@ const Globe3D = () => {
       CAMERA_FOV,
       width / height,
       CAMERA_NEAR,
-      CAMERA_FAR
+      CAMERA_FAR,
     );
     camera.position.set(0, 0, CAMERA_INITIAL_Z);
     cameraRef.current = camera;
@@ -61,7 +61,7 @@ const Globe3D = () => {
 
     const directionalLight = new THREE.DirectionalLight(
       LIGHT_COLOR,
-      LIGHT_INTENSITY
+      LIGHT_INTENSITY,
     );
     directionalLight.position.set(1, 1, 1);
     scene.add(directionalLight);

@@ -25,7 +25,9 @@ body {
 .icon {
   font-size: 2rem;
   color: #f5efee;
-  transition: transform 0.2s, color 0.2s;
+  transition:
+    transform 0.2s,
+    color 0.2s;
 }
 
 .icon:hover {
