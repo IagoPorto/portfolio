@@ -9,7 +9,7 @@ describe("<About />", () => {
   it("renders the section title", () => {
     render(<About />);
     expect(
-      screen.getByRole("heading", { name: /about me/i })
+      screen.getByRole("heading", { name: /about me/i }),
     ).toBeInTheDocument();
   });
 
@@ -27,7 +27,7 @@ describe("<About />", () => {
   it("includes mention of tech stack", () => {
     render(<About />);
     expect(
-      screen.getByText(/java\/spring, django or postgresql/i)
+      screen.getByText(/java\/spring, django or postgresql/i),
     ).toBeInTheDocument();
   });
 });
