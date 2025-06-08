@@ -3,6 +3,8 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { About } from "../../components/About";
 
+const PARAGRAPHS = 3;
+
 describe("<About />", () => {
   it("renders the section title", () => {
     render(<About />);
@@ -14,7 +16,7 @@ describe("<About />", () => {
   it("renders all paragraphs", () => {
     render(<About />);
     const paragraphs = screen.getAllByText(/i[’']?m/i);
-    expect(paragraphs.length).toBeGreaterThanOrEqual(3); // Expecting 3 paragraphs
+    expect(paragraphs.length).toBeGreaterThanOrEqual(PARAGRAPHS);
   });
 
   it("includes content about Technica Engineering", () => {

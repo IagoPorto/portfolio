@@ -4,11 +4,11 @@ import "./Project.css";
 
 export function Project({ name, description, url, photos = [], tecnologies }) {
   const [current, setCurrent] = useState(0);
-
+  const INTERVAL = 3000;
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % photos.length);
-    }, 3000);
+    }, INTERVAL);
     return () => clearInterval(interval);
   }, [photos.length]);
 

@@ -13,8 +13,8 @@ export function Menu() {
         if (section) {
           const rect = section.getBoundingClientRect();
           if (
-            rect.top <= window.innerHeight / 3 &&
-            rect.bottom >= window.innerHeight / 3
+            rect.top <= window.innerHeight / MENU_ITEMS.length &&
+            rect.bottom >= window.innerHeight / MENU_ITEMS.length
           ) {
             currentSection = id;
           }
