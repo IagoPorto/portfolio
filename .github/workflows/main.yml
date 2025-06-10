@@ -10,7 +10,7 @@ on:
       
 jobs:
   format:
-    name: Prettier
+    name: format
     runs-on: ubuntu-latest
 
     defaults:
