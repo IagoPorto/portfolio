@@ -18,7 +18,7 @@ jobs:
         working-directory: portfolio
 
     steps:
-      - name: Checkout code
+      - name: format
         uses: actions/checkout@v4
 
       - name: Use Node.js 18
@@ -32,7 +32,7 @@ jobs:
       - name: Run Prettier (fix)
         run: npm run format:fix
   lint:
-    name: ESLint & Prettier
+    name: lint
     runs-on: ubuntu-latest
 
     defaults:
@@ -54,7 +54,7 @@ jobs:
       - name: Run ESLint (check only)
         run: npm run lint:check
   test:
-    name: Vitest
+    name: test
     runs-on: ubuntu-latest
 
     defaults:
