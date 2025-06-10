@@ -1,4 +1,4 @@
-name: CI - lint & format checks
+name: cicd
 
 on:
   push:
@@ -7,9 +7,31 @@ on:
   pull_request:
     branches:
       - master
-
+      
 jobs:
-  lint-and-format:
+  format:
+    name: Prettier
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: portfolio
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Prettier (fix)
+        run: npm run format:fix
+  lint:
     name: ESLint & Prettier
     runs-on: ubuntu-latest
 
@@ -24,16 +46,32 @@ jobs:
       - name: Use Node.js 18
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 24
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run ESLint (check only)
         run: npm run lint:check
+  test:
+    name: Vitest
+    runs-on: ubuntu-latest
 
-      - name: Run Prettier (check only)
-        run: npm run format:check
+    defaults:
+      run:
+        working-directory: portfolio
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run Vitest
         run: npm run test:coverage
