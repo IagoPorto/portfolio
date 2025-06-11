@@ -60,6 +60,12 @@ GitHub Actions are configured to run automatically on each Pull Request. These s
 
 This ensures that all code contributions meet the project's standards before being merged.
 
+## Disclaimer
+This code is provided as-is, without any warranties or guarantees. Use it at your own risk.
+
+If you use any part of this code in your projects, please mention me and provide a link to this repository.
+
+Also, ensure you comply with the terms of the MIT License and give appropriate credit.
 
 ## Contributions
 
