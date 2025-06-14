@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Menu } from "../../components/Menu";
-import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
+import { describe, it, vi, expect, beforeEach, afterEach, act } from "vitest";
 
 const MENU_ITEMS = ["about", "experience", "projects"];
 
@@ -46,13 +46,15 @@ describe("Menu", () => {
     });
   });
 
-  it("highlights the active section on scroll", () => {
+  t("highlights the active section on scroll", () => {
     render(<Menu />);
 
-    const event = new Event("scroll");
-    window.dispatchEvent(event);
+    act(() => {
+      const event = new Event("scroll");
+      window.dispatchEvent(event);
+    });
 
-    const activeLink = screen.getByText("ABOUT"); // our mocked sections always match
+    const activeLink = screen.getByText("ABOUT");
     expect(activeLink).toHaveClass("active");
   });
 });
