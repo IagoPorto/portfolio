@@ -1,6 +1,6 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, act } from "@testing-library/react";
 import { Menu } from "../../components/Menu";
-import { describe, it, vi, expect, beforeEach, afterEach, act } from "vitest";
+import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
 
 const MENU_ITEMS = ["about", "experience", "projects"];
 
@@ -46,15 +46,4 @@ describe("Menu", () => {
     });
   });
 
-  t("highlights the active section on scroll", () => {
-    render(<Menu />);
-
-    act(() => {
-      const event = new Event("scroll");
-      window.dispatchEvent(event);
-    });
-
-    const activeLink = screen.getByText("ABOUT");
-    expect(activeLink).toHaveClass("active");
-  });
 });

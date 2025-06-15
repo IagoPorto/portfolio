@@ -21,6 +21,8 @@ export function MouseFollower() {
   return (
     <main>
       <div
+        role="presentation"
+        data-testid="mouse-follower"
         className="mouse-follower"
         style={{
           transform: `translate(${position.x}px, ${position.y}px)`,

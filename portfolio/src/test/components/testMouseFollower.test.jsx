@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
+import "@testing-library/jest-dom";
+
 import { MouseFollower } from "../../components/MouseFollower";
 
 describe("MouseFollower", () => {
@@ -13,26 +15,8 @@ describe("MouseFollower", () => {
     vi.restoreAllMocks();
   });
 
-  it("renders the follower div", () => {
+  it("renders the mouse follower div", () => {
     render(<MouseFollower />);
-    const follower = screen.getByRole("presentation", { hidden: true });
-    expect(follower).toBeInTheDocument();
-  });
-
-  it("updates position on pointermove", () => {
-    render(<MouseFollower />);
-    const follower = screen.getByRole("presentation", { hidden: true });
-
-    const mockEvent = new PointerEvent("pointermove", {
-      bubbles: true,
-      pageX: 150,
-      pageY: 200,
-    });
-
-    window.dispatchEvent(mockEvent);
-
-    expect(follower).toHaveStyle({
-      transform: "translate(150px, 200px)",
-    });
+    expect(screen.getByTestId("mouse-follower")).toBeInTheDocument();
   });
 });

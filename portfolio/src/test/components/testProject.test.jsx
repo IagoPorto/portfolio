@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, act } from "@testing-library/react";
 import { Project } from "../../components/Project";
-const advanceTimers= 3000;
+const advanceTimers = 3000;
 describe("Project", () => {
   const props = {
     name: "Test Project",
@@ -42,13 +42,18 @@ describe("Project", () => {
     const getImg = () => screen.getByRole("img");
 
     expect(getImg()).toHaveAttribute("src", "/img/1.jpg");
-    
-    vi.advanceTimersByTime(advanceTimers);
+    act(() => {
+      vi.advanceTimersByTime(advanceTimers);
+    });
     expect(getImg()).toHaveAttribute("src", "/img/2.jpg");
-    vi.advanceTimersByTime(advanceTimers);
-    expect(getImg()).toHaveAttribute("src", "/img/3.jpg");
-    vi.advanceTimersByTime(advanceTimers);
-    expect(getImg()).toHaveAttribute("src", "/img/1.jpg"); // looped back
+    act(() => {
+      vi.advanceTimersByTime(advanceTimers);
+    });
+      expect(getImg()).toHaveAttribute("src", "/img/3.jpg");
+    act(() => {
+      vi.advanceTimersByTime(advanceTimers);
+    });
+      expect(getImg()).toHaveAttribute("src", "/img/1.jpg"); // looped back
   });
 
   it("renders no image if photos array is empty", () => {

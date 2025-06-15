@@ -1,3 +1,4 @@
+// src/test/components/testGlobe3D.test.jsx
 import { render, fireEvent } from "@testing-library/react";
 import Globe3D from "../../components/Globe3D";
 import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
@@ -13,9 +14,25 @@ vi.mock("three", async () => {
       render: vi.fn(),
       domElement: document.createElement("canvas"),
       dispose: vi.fn(),
+      updateWorldMatrix: vi.fn(),
     })),
     CubeTextureLoader: vi.fn(() => ({
       load: vi.fn(() => ({})),
+    })),
+  };
+});
+
+vi.mock("three/examples/jsm/loaders/OBJLoader", async () => {
+  const { Object3D } = await vi.importActual("three");
+  return {
+    OBJLoader: vi.fn(() => ({
+      setMaterials: vi.fn(),
+      load: vi.fn((_, onLoad) => {
+        const obj = new Object3D();
+        // si quieres espiar scale.set:
+        vi.spyOn(obj.scale, "set");
+        onLoad(obj);
+      }),
     })),
   };
 });
@@ -30,27 +47,12 @@ vi.mock("three/examples/jsm/loaders/MTLLoader", () => ({
   })),
 }));
 
-vi.mock("three/examples/jsm/loaders/OBJLoader", () => ({
-  OBJLoader: vi.fn(() => ({
-    setMaterials: vi.fn(),
-    load: vi.fn((_, onLoad) =>
-      onLoad({
-        scale: { set: vi.fn() },
-        position: { sub: vi.fn() },
-        traverse: vi.fn((cb) => cb({ isMesh: true, material: {} })),
-      }),
-    ),
-  })),
-}));
-
 describe("Globe3D", () => {
   let originalRAF;
-
   beforeEach(() => {
     originalRAF = window.requestAnimationFrame;
-    window.requestAnimationFrame = vi.fn((cb) => cb());
+    window.requestAnimationFrame = vi.fn();
   });
-
   afterEach(() => {
     window.requestAnimationFrame = originalRAF;
   });
@@ -65,9 +67,7 @@ describe("Globe3D", () => {
   it("changes rotation speed on hover", () => {
     const { container } = render(<Globe3D />);
     const div = container.querySelector("div");
-
     fireEvent.mouseEnter(div);
-    // rotationSpeedRef is internal, so we just ensure no crash and simulate the path
     fireEvent.mouseLeave(div);
   });
 

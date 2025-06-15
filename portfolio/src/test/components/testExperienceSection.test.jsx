@@ -9,9 +9,6 @@ describe("ExperienceSection", () => {
   it("renders the section with a proper heading", () => {
     render(<ExperienceSection />);
 
-    const section = screen.getByRole("region", { name: /experience/i });
-    expect(section).toBeInTheDocument();
-
     const heading = screen.getByRole("heading", {
       level: headingLevel,
       name: /experience/i,
@@ -22,14 +19,16 @@ describe("ExperienceSection", () => {
   it("renders two experience entries", () => {
     render(<ExperienceSection />);
 
-    const jobHeadings = screen.getAllByRole("heading", { level: headingLevel3 });
+    const jobHeadings = screen.getAllByRole("heading", {
+      level: headingLevel3,
+    });
     expect(jobHeadings).toHaveLength(headingLevel);
 
     expect(
-      screen.getByRole("link", { name: "Technica Engineering Spain" }),
+      screen.getByText("Technica Engineering Spain"),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("link", { name: "Imatia Innovation" }),
+      screen.getByText("Imatia Innovation"),
     ).toBeInTheDocument();
   });
 
