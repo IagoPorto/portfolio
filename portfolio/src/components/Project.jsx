@@ -22,11 +22,13 @@ export function Project({ name, description, url, photos = [], tecnologies }) {
         <strong>Stack:</strong> {tecnologies.join(", ")}
       </p>
       <a href={url} target="_blank" rel="noopener noreferrer">
-        <img
-          src={photos[current]}
-          alt={`${name} slide ${current + 1}`}
-          className="project-photo"
-        />
+        {photos.length > 0 && (
+          <img
+            src={photos[current]}
+            alt={`${name} slide ${current + 1}`}
+            className="project-photo"
+          />
+        )}
       </a>
     </div>
   );

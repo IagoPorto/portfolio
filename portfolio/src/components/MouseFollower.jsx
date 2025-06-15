@@ -6,7 +6,7 @@ export function MouseFollower() {
 
   useEffect(() => {
     const handleMove = (event) => {
-      const { pageX, pageY } = event; // Usamos pageX y pageY para incluir el desplazamiento
+      const { pageX, pageY } = event;
       setPosition({ x: pageX, y: pageY });
     };
 
@@ -21,9 +21,11 @@ export function MouseFollower() {
   return (
     <main>
       <div
+        role="presentation"
+        data-testid="mouse-follower"
         className="mouse-follower"
         style={{
-          transform: `translate(${position.x}px, ${position.y}px)`, // Aplica la posición con scroll incluido
+          transform: `translate(${position.x}px, ${position.y}px)`,
         }}
       />
     </main>
