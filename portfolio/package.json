@@ -16,7 +16,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@eslint/config-array": "^0.20.0",
+    "@eslint/config-array": "^0.21.0",
     "@eslint/object-schema": "^2.1.6",
     "@react-three/drei": "^10.1.2",
     "@react-three/fiber": "^9.1.2",
