@@ -76,6 +76,7 @@ jobs:
       - name: Run Vitest
         run: npm run test:coverage
   deploy:
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     runs-on: ubuntu-latest
     name: deploy
     defaults:
@@ -92,7 +93,7 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
