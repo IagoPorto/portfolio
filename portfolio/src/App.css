@@ -91,8 +91,8 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: left;
-  height: 100vh; /* Asegura que la sección ocupa toda la pantalla */
-  justify-content: space-between; /* Empuja los iconos hacia abajo */
+  height: 100vh; 
+  justify-content: space-between;
 }
 
 .right-section {
@@ -144,7 +144,7 @@ h2 {
 
   .left-section,
   .right-section {
-    width: calc(100% - 32px);
+    width: 100%;
     max-width: none;
     margin: 0 auto;
     padding: 16px;
