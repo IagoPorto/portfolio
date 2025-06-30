@@ -19,12 +19,12 @@ const MODEL_SCALE = 0.02;
 const SEVEN = 7;
 
 const ENV_PATHS = [
-  "/env/px.jpg",
-  "/env/nx.jpg",
-  "/env/py.jpg",
-  "/env/ny.jpg",
-  "/env/pz.jpg",
-  "/env/nz.jpg",
+  "/portfolio/env/px.jpg",
+  "/portfolio/env/nx.jpg",
+  "/portfolio/env/py.jpg",
+  "/portfolio/env/ny.jpg",
+  "/portfolio/env/pz.jpg",
+  "/portfolio/env/nz.jpg",
 ];
 
 const Globe3D = () => {
@@ -71,11 +71,11 @@ const Globe3D = () => {
     scene.environment = envMap;
 
     const mtlLoader = new MTLLoader();
-    mtlLoader.load("/3D/cube.mtl", (materials) => {
+    mtlLoader.load("/portfolio/3D/cube.mtl", (materials) => {
       materials.preload();
       const objLoader = new OBJLoader();
       objLoader.setMaterials(materials);
-      objLoader.load("/3D/cube.obj", (object) => {
+      objLoader.load("/portfolio/3D/cube.obj", (object) => {
         object.scale.set(MODEL_SCALE, MODEL_SCALE, MODEL_SCALE);
 
         const box = new THREE.Box3().setFromObject(object);
