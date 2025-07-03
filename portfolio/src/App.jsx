@@ -13,9 +13,9 @@ import NoiseBackground from "./components/NoiseBackground.jsx";
 function App() {
   return (
     <>
-      <MouseFollower />
-      <NoiseBackground />
       <div className="layout-container">
+        <MouseFollower />
+        <NoiseBackground />
         <aside className="left-section">
           <Presentation />
           <Menu />
