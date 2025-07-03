@@ -1,7 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 body {
   color: #f5efee;
   font-family: system-ui;
   font-size: 17px;
+  overflow-x: hidden;
+  word-wrap: break-word;
 }
 .menu-item {
   color: #f5efee;
