@@ -16,6 +16,7 @@ body {
     0;
   background-repeat: repeat;
   animation: bg-animation 0.2s infinite;
+  pointer-events: none;
   opacity: 0.9;
   visibility: visible;
   z-index: 0;
@@ -56,3 +57,4 @@ body {
     transform: translate(5%, 0);
   }
 }
+
