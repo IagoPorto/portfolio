@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   color: #f5efee;
   font-family: system-ui;
@@ -100,7 +99,7 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: left;
-  height: 100vh; 
+  height: 100vh;
   justify-content: space-between;
 }
 

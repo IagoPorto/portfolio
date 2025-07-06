@@ -49,11 +49,11 @@ describe("Project", () => {
     act(() => {
       vi.advanceTimersByTime(advanceTimers);
     });
-      expect(getImg()).toHaveAttribute("src", "/img/3.jpg");
+    expect(getImg()).toHaveAttribute("src", "/img/3.jpg");
     act(() => {
       vi.advanceTimersByTime(advanceTimers);
     });
-      expect(getImg()).toHaveAttribute("src", "/img/1.jpg"); // looped back
+    expect(getImg()).toHaveAttribute("src", "/img/1.jpg"); // looped back
   });
 
   it("renders no image if photos array is empty", () => {

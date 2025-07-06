@@ -24,12 +24,8 @@ describe("ExperienceSection", () => {
     });
     expect(jobHeadings).toHaveLength(headingLevel);
 
-    expect(
-      screen.getByText("Technica Engineering Spain"),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Imatia Innovation"),
-    ).toBeInTheDocument();
+    expect(screen.getByText("Technica Engineering Spain")).toBeInTheDocument();
+    expect(screen.getByText("Imatia Innovation")).toBeInTheDocument();
   });
 
   it("renders all details for Technica Engineering", () => {

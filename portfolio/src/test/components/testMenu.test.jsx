@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { Menu } from "../../components/Menu";
 import { describe, it, vi, expect, beforeEach, afterEach } from "vitest";
 
@@ -45,5 +45,4 @@ describe("Menu", () => {
       block: "start",
     });
   });
-
 });
