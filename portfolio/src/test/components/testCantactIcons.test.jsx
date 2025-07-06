@@ -2,11 +2,13 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import ContactIcons from "../../components/ContactIcons";
 
+const ICONS = 4
+
 describe("ContactIcons", () => {
   it("renders all contact icons", () => {
     render(<ContactIcons />);
     const links = screen.getAllByRole("link");
-    expect(links).toHaveLength(3);
+    expect(links).toHaveLength(ICONS);
   });
 
   it("contains GitHub icon with correct link and attributes", () => {
@@ -45,5 +47,16 @@ describe("ContactIcons", () => {
     );
     expect(emailLink).not.toHaveAttribute("target");
     expect(emailLink).not.toHaveAttribute("rel");
+  });
+
+  it("contains Resume icon with correct link and attributes", () => {
+    render(<ContactIcons />);
+    const resumeLink = screen
+      .getAllByRole("link")
+      .find((a) => a.getAttribute("href") === "/portfolio/resume.pdf");
+    expect(resumeLink).toBeDefined();
+    expect(resumeLink).toHaveAttribute("target", "_blank");
+    expect(resumeLink).toHaveAttribute("rel", "noopener noreferrer");
+    expect(resumeLink).toHaveAttribute("title", "Look at my resume");
   });
 });

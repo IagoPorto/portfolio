@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
 
 const ContactIcons = () => {
   return (
@@ -19,6 +19,14 @@ const ContactIcons = () => {
       </a>
       <a href="mailto:iagoportomontes@gmail.com">
         <FaEnvelope className="icon" />
+      </a>
+      <a
+        href="/portfolio/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Look at my resume"
+      >
+        <FaFileAlt className="icon" />
       </a>
     </div>
   );
