@@ -17,7 +17,7 @@ export function About() {
         features, set up CI/CD pipelines, and bridged backend services with
         React, JavaFX or Android frontends. Along the way, I&apos;ve optimized
         SQL queries, containerized workflows, and even refined user
-        interfaces;always aiming for reliability and a clean developer
+        interfaces; always aiming for reliability and a clean developer
         experience.
       </p>
 
