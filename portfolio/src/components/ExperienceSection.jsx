@@ -13,14 +13,15 @@ export function ExperienceSection() {
         initDate="April 2025"
         finalDate="Present"
         details={[
-          "Built a full-stack platform for automotive testing with Django on the backend and React on the frontend.",
-          "Wired Jenkins pipelines into the UI so engineers can launch vehicle tests with one click.",
-          "Set up GitLab CI/CD flows that eliminated manual steps and accelerated our release cadence.",
-          "Swapped container-based deployments for native Windows execution to simplify test-bench integration.",
-          "Partnered with UX designers and test engineers to streamline interfaces and workflows.",
-          "Backed everything up with unit and integration tests (pytest & Vitest) for rock-solid reliability.",
-          "Owned Scrum ceremonies, sprint planning, daily stand-ups, retrospectives and drove code reviews.",
+          "Designed and delivered a full-stack testing platform that replaced spreadsheet-driven workflows and reduced time-to-test for engineers.",
+          "Connected backend automation with a React UI, letting the team kick off vehicle tests with a single click (actual cheering witnessed).",
+          "Built CI/CD pipelines that removed manual deployment steps and made releases predictable instead of hero moments.",
+          "Collaborated closely with UX testers and hardware engineers to reduce friction and remove unnecessary complexity from daily workflows.",
+          "Added automated tests (pytest + Vitest) so we can sleep at night without wondering whether a commit broke something.",
+          "Mentored junior developers and guided our intern through feature delivery, helping them become more independent and confident contributing to the codebase.",
+          "Facilitated Agile ceremonies, sprint planning, and code reviews, keeping the team aligned and shipping value instead of Jira tickets."
         ]}
+        technologies={["TypeScript", "React", "Python", "Django", "Docker"]}
       />
 
       <Experience
@@ -38,6 +39,7 @@ export function ExperienceSection() {
           "Developed a C++ OCR microservice for license-plate detection, integrated via Spring.",
           "Cut SQL runtimes by over 50% and polished Android app workflows for better UX.",
         ]}
+        technologies={["Java", "Spring", "PostgreSQL", "Android", "OracleSQL"]}
       />
     </section>
   );
