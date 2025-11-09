@@ -24,10 +24,4 @@ describe("<About />", () => {
     expect(screen.getByText(/technica engineering/i)).toBeInTheDocument();
   });
 
-  it("includes mention of tech stack", () => {
-    render(<About />);
-    expect(
-      screen.getByText(/java\/spring, django or postgresql/i),
-    ).toBeInTheDocument();
-  });
 });

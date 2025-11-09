@@ -13,7 +13,7 @@ export function About() {
 
       <p>
         Tech stack? I use whatever helps us win. From Java/Spring and Python/Django to
-        PostgreSQL, React or Android, I adapt to what the project needs and
+        PostgreSQL, React or Android. I adapt to what the project needs and
         keep an eye on maintainability and best practices, because shipping
         fast is great, but maintaining what we build should be even faster.
       </p>

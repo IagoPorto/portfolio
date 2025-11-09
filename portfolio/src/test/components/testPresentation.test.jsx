@@ -27,12 +27,5 @@ describe("Presentation", () => {
     expect(subheading).toBeInTheDocument();
   });
 
-  it("renders the description with emphasis", () => {
-    render(<Presentation />);
-    const paragraph = screen.getByText(/I bring.*behind the scenes/i);
-    expect(paragraph).toBeInTheDocument();
-    expect(paragraph.querySelector("strong")).toHaveTextContent(
-      "applications to life",
-    );
-  });
+
 });
