@@ -31,7 +31,7 @@ describe("Experience", () => {
   it("renders init and final dates", () => {
     render(<Experience {...props} />);
 
-    const dateText = screen.getByText(`${props.initDate} - ${props.finalDate}`);
+    const dateText = screen.getByText(`${props.initDate} – ${props.finalDate}`);
     expect(dateText).toBeInTheDocument();
   });
 

@@ -11,3 +11,20 @@
   transform: scale(1.2);
   color: #f8cdc6;
 }
+
+.tech-chips {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  background-color: #1e1e1e;
+  border: 1px solid #f8cdc6;
+  color: #f8cdc6;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  user-select: none;
+}

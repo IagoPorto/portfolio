@@ -8,6 +8,7 @@ export function Experience({
   initDate,
   finalDate,
   details,
+  technologies = [],
 }) {
   return (
     <div className="job">
@@ -18,13 +19,23 @@ export function Experience({
         </a>
       </h3>
       <p>
-        {initDate} - {finalDate}
+        {initDate} &ndash; {finalDate}
       </p>
       <ul>
         {details.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
+
+      {technologies.length > 0 && (
+        <div className="tech-chips">
+          {technologies.map((tech, index) => (
+            <span key={index} className="chip">
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -36,4 +47,5 @@ Experience.propTypes = {
   initDate: PropTypes.string.isRequired,
   finalDate: PropTypes.string.isRequired,
   details: PropTypes.arrayOf(PropTypes.string).isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string),
 };
