@@ -15,11 +15,6 @@ function App() {
   useEffect(() => {
     const sections = document.querySelectorAll(".right-section .reveal");
 
-    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) {
-      sections.forEach((el) => el.classList.add("visible"));
-      return;
-    }
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
