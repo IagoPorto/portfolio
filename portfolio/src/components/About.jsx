@@ -12,7 +12,7 @@ export function About() {
       </p>
 
       <p>
-        I don&apos;t just ship code &ndash; I decide what to build and why. As a
+        I don&apos;t just ship code, I decide what to build and why. As a
         Product Owner I own the backlog, prioritize what brings the most value,
         and align stakeholders around a clear roadmap, while as an engineer I
         still get my hands dirty with the implementation.
@@ -28,9 +28,9 @@ export function About() {
 
       <p>
         In companies like Technica Engineering and Imatia, I&apos;ve delivered
-        new features end&ndash;to&ndash;end, automated pipelines, and connected
+        new features end-to-end, automated pipelines, and connected
         backend services with desktop and web frontends. I focus on clean
-        architecture and long&ndash;term value: every refactor, query
+        architecture and long-term value: every refactor, query
         optimization or CI step is one step closer to a product that scales.
       </p>
 

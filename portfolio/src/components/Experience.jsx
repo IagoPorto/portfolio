@@ -19,7 +19,7 @@ export function Experience({
         </a>
       </h3>
       <p className="job-date">
-        {initDate} &ndash; {finalDate}
+        {initDate} - {finalDate}
       </p>
       <ul>
         {details.map((item, index) => (
