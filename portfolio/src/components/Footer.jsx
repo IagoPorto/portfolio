@@ -17,7 +17,7 @@ export default function Footer() {
         and caffeine
       </p>
       <p className="footer-copy">
-        &copy; 2025 Iago Porto. All rights reserved.
+        &copy; 2026 Iago Porto. All rights reserved.
       </p>
     </footer>
   );
