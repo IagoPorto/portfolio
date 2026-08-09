@@ -38,7 +38,7 @@ describe("ExperienceSection", () => {
       "Collaborated closely with UX testers and hardware engineers to reduce friction and remove unnecessary complexity from daily workflows.",
       "Added automated tests (pytest + Vitest) so we can sleep at night without wondering whether a commit broke something.",
       "Mentored junior developers and guided our intern through feature delivery, helping them become more independent and confident contributing to the codebase.",
-      "Facilitated Agile ceremonies, sprint planning, and code reviews, keeping the team aligned and shipping value instead of Jira tickets."
+      "Facilitated Agile ceremonies, sprint planning, and code reviews, keeping the team aligned and shipping value instead of Jira tickets.",
     ];
 
     technicaDetails.forEach((detail) => {
