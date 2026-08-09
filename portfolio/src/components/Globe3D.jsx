@@ -14,7 +14,7 @@ const CAMERA_INITIAL_Z = 5;
 const LIGHT_COLOR = 0xf8cdc6;
 const LIGHT_INTENSITY = 1;
 
-const MODEL_SCALE = 0.02;
+const MODEL_SCALE = 0.022;
 
 const SEVEN = 7;
 
@@ -152,8 +152,8 @@ const Globe3D = () => {
       ref={mountRef}
       style={{
         width: "100%",
-        height: "50vh",
-        maxHeight: "600px",
+        height: "56vh",
+        maxHeight: "680px",
         minHeight: "300px",
       }}
       onMouseEnter={handleMouseEnter}
