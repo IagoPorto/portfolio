@@ -1,15 +1,24 @@
 .job a {
-  font-size: 1.5rem;
-  color: #f5efee;
+  color: var(--text);
   transition:
-    transform 0.2s,
-    color 0.2s;
+    color 0.2s,
+    border-color 0.2s;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
 .job a:hover {
-  transform: scale(1.2);
-  color: #f8cdc6;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.job-date {
+  margin: 0.25rem 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .tech-chips {
@@ -20,11 +29,13 @@
 }
 
 .chip {
-  background-color: #1e1e1e;
-  border: 1px solid #f8cdc6;
-  color: #f8cdc6;
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.85rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
   user-select: none;
 }

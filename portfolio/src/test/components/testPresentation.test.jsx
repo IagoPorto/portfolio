@@ -21,11 +21,9 @@ describe("Presentation", () => {
   it("renders the subtitle", () => {
     render(<Presentation />);
     const subheading = screen.getByRole("heading", {
-      name: "Software Engineer",
+      name: "Software Engineer & Product Owner",
       level: 2,
     });
     expect(subheading).toBeInTheDocument();
   });
-
-
 });

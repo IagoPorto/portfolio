@@ -22,6 +22,6 @@ describe("Footer", () => {
 
   it("displays copyright", () => {
     render(<Footer />);
-    expect(screen.getByText(/© 2025 Iago Porto/i)).toBeInTheDocument();
+    expect(screen.getByText(/© 2026 Iago Porto/i)).toBeInTheDocument();
   });
 });

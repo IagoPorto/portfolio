@@ -7,7 +7,7 @@ describe("Project", () => {
     name: "Test Project",
     description: "A sample description",
     url: "https://example.com",
-    tecnologies: ["React", "Vitest", "CSS"],
+    technologies: ["React", "Vitest", "CSS"],
     photos: ["/img/1.jpg", "/img/2.jpg", "/img/3.jpg"],
   };
 

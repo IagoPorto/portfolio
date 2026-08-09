@@ -4,6 +4,7 @@ const MENU_ITEMS = ["about", "experience", "projects"];
 
 export function Menu() {
   const [activeSection, setActiveSection] = useState("");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +26,7 @@ export function Menu() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // no missing deps now
+  }, []);
 
   const handleClick = (id, event) => {
     event.preventDefault();
@@ -33,11 +34,23 @@ export function Menu() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+    setOpen(false);
   };
 
   return (
-    <nav className="menu">
-      <ul>
+    <nav className={`menu ${open ? "open" : ""}`}>
+      <button
+        type="button"
+        className="hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded={open}
+        onClick={() => setOpen((prev) => !prev)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+      <ul className={open ? "open" : ""}>
         {MENU_ITEMS.map((id) => (
           <li key={id}>
             <a

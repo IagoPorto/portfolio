@@ -18,8 +18,8 @@ export function Experience({
           {companyName}
         </a>
       </h3>
-      <p>
-        {initDate} &ndash; {finalDate}
+      <p className="job-date">
+        {initDate} - {finalDate}
       </p>
       <ul>
         {details.map((item, index) => (

@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import ContactIcons from "../../components/ContactIcons";
 
-const ICONS = 4
+const ICONS = 4;
 
 describe("ContactIcons", () => {
   it("renders all contact icons", () => {

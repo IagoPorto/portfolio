@@ -14,7 +14,7 @@ const CAMERA_INITIAL_Z = 5;
 const LIGHT_COLOR = 0xf8cdc6;
 const LIGHT_INTENSITY = 1;
 
-const MODEL_SCALE = 0.02;
+const MODEL_SCALE = 0.022;
 
 const SEVEN = 7;
 
@@ -109,7 +109,11 @@ const Globe3D = () => {
       renderer.render(scene, camera);
     };
 
-    animate();
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) {
+      renderer.render(scene, camera);
+    } else {
+      animate();
+    }
 
     const handleResize = () => {
       if (!mountRef.current || !cameraRef.current || !rendererRef.current)
@@ -150,10 +154,12 @@ const Globe3D = () => {
   return (
     <div
       ref={mountRef}
+      role="img"
+      aria-label="3D rendered globe"
       style={{
         width: "100%",
-        height: "50vh",
-        maxHeight: "600px",
+        height: "56vh",
+        maxHeight: "680px",
         minHeight: "300px",
       }}
       onMouseEnter={handleMouseEnter}

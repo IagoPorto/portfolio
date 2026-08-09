@@ -16,4 +16,13 @@
   margin: 0 0.25em;
   vertical-align: middle;
   font-size: 1.1em;
+  color: var(--text);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.footer a:hover .icon {
+  color: var(--accent);
+  transform: translateY(-2px);
 }

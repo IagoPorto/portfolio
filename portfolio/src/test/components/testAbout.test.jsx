@@ -23,5 +23,4 @@ describe("<About />", () => {
     render(<About />);
     expect(screen.getByText(/technica engineering/i)).toBeInTheDocument();
   });
-
 });

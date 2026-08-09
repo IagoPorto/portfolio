@@ -1,27 +1,31 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./MouseFollower.css";
 
 export function MouseFollower() {
-  const [pos, setPos] = useState({ x: 0, y: 0 });
+  const ref = useRef(null);
 
   useEffect(() => {
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches)
+      return;
+    const el = ref.current;
+    const CENTER_OFFSET = el.offsetWidth / 2;
+
     const handleMove = (e) => {
-      setPos({ x: e.clientX, y: e.clientY });
+      el.style.transform = `translate(${e.clientX - CENTER_OFFSET}px, ${
+        e.clientY - CENTER_OFFSET
+      }px)`;
     };
 
-    window.addEventListener("pointermove", handleMove);
+    window.addEventListener("pointermove", handleMove, { passive: true });
     return () => window.removeEventListener("pointermove", handleMove);
   }, []);
 
   return (
     <div
+      ref={ref}
       role="presentation"
       data-testid="mouse-follower"
       className="mouse-follower"
-      style={{
-        top: `${pos.y}px`,
-        left: `${pos.x}px`,
-      }}
     />
   );
 }
