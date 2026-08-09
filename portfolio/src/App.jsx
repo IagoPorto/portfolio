@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { MouseFollower } from "./components/MouseFollower.jsx";
 import { Presentation } from "./components/Presentation.jsx";
 import { Menu } from "./components/Menu.jsx";
@@ -11,6 +12,30 @@ import "./App.css";
 import NoiseBackground from "./components/NoiseBackground.jsx";
 
 function App() {
+  useEffect(() => {
+    const sections = document.querySelectorAll(".right-section .reveal");
+
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) {
+      sections.forEach((el) => el.classList.add("visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <div className="layout-container">
