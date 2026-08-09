@@ -24,7 +24,7 @@ export function ProjectsSection() {
         url="https://github.com/IagoPorto/Dron-Firefly"
         photos={[
           "https://raw.githubusercontent.com/IagoPorto/Dron-Firefly/main/dron2.png",
-          "https://raw.githubusercontent.com/IagoPorto/Drone-Firefly/main/dron.jpg",
+          "https://raw.githubusercontent.com/IagoPorto/Dron-Firefly/main/dron.jpg",
         ]}
         technologies={[
           "C++",
