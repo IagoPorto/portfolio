@@ -18,7 +18,7 @@ export function Experience({
           {companyName}
         </a>
       </h3>
-      <p>
+      <p className="job-date">
         {initDate} &ndash; {finalDate}
       </p>
       <ul>

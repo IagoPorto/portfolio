@@ -17,7 +17,7 @@
 }
 
 .project a {
-  color: #f5efee;
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -27,5 +27,5 @@
 
 .projects > .project + .project {
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--border);
 }
