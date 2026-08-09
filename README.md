@@ -4,20 +4,31 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat)](https://opensource.org/licenses/MIT)
 
-A personal portfolio website built using **React**.
+A personal portfolio website built using **React**, deployed at
+**[iagoporto.github.io/portfolio](https://iagoporto.github.io/portfolio/)**.
 
 ## Overview
 
-This repository hosts my portfolio website, showcasing my projects and skills with a clean, modern design.
+This repository hosts my portfolio website, showcasing my work as a
+**Software Engineer & Product Owner**: projects, experience, and skills with a
+clean, editorial dark design.
 
 ![This is my personal portfolio](img/portfolio.png)
 
 ## Features
 
-- **Responsive Design:** Adapts seamlessly to various screen sizes.
+- **Responsive Design:** Adapts seamlessly to various screen sizes, with a
+  hamburger navigation on mobile.
+- **Design system:** CSS custom properties for colors and typography
+  (Fraunces, Instrument Sans, Spline Sans Mono), consistent across components.
+- **3D signature piece:** A self-contained WebGL crystal cube rendered with
+  Three.js (no external assets).
+- **Motion that respects users:** staggered load-in, scroll reveals, and a
+  subtle cursor glow - all disabled under `prefers-reduced-motion`.
 - **Component-Based Architecture:** Built with reusable React components.
 - **Optimized Build:** Fast development and production builds.
-- **Automated Quality Checks:** Formatting, linting, and testing steps are enforced via GitHub Actions.
+- **Automated Quality Checks:** Formatting, linting, and testing steps are
+  enforced via GitHub Actions.
 
 ## Installation
 
@@ -27,12 +38,12 @@ This repository hosts my portfolio website, showcasing my projects and skills wi
    git clone https://github.com/IagoPorto/portfolio.git
    cd portfolio
    ```
-   
+
 2. **Install Dependencies**:
-  
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 3. **Run the Development Server**:
 
