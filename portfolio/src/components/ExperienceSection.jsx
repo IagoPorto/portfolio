@@ -48,7 +48,14 @@ export function ExperienceSection() {
           "Mentored junior developers and guided our intern through feature delivery, helping them become more independent and confident contributing to the codebase.",
           "Added automated tests (pytest + Vitest) so we can sleep at night without wondering whether a commit broke something.",
         ]}
-        technologies={["TypeScript", "React", "Python", "FastAPI", "Django", "Docker"]}
+        technologies={[
+          "TypeScript",
+          "React",
+          "Python",
+          "FastAPI",
+          "Django",
+          "Docker",
+        ]}
       />
 
       <Experience

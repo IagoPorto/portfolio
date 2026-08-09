@@ -28,10 +28,10 @@ export function About() {
 
       <p>
         In companies like Technica Engineering and Imatia, I&apos;ve delivered
-        new features end-to-end, automated pipelines, and connected
-        backend services with desktop and web frontends. I focus on clean
-        architecture and long-term value: every refactor, query
-        optimization or CI step is one step closer to a product that scales.
+        new features end-to-end, automated pipelines, and connected backend
+        services with desktop and web frontends. I focus on clean architecture
+        and long-term value: every refactor, query optimization or CI step is
+        one step closer to a product that scales.
       </p>
 
       <p>
