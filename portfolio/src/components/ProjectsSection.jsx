@@ -1,9 +1,10 @@
 import { Project } from "./Project";
+import { ProjectSkeleton } from "./ProjectSkeleton";
 import "./ProjectsSection.css";
 
 export function ProjectsSection() {
   return (
-    <section className="projects" id="projects">
+    <section className="projects reveal" id="projects">
       <h2 className="section-title">Personal Projects</h2>
 
       <Project
@@ -14,7 +15,7 @@ export function ProjectsSection() {
           "https://raw.githubusercontent.com/IagoPorto/IagoPorto/main/pictures/logo-completo-color.jpg",
           "https://raw.githubusercontent.com/IagoPorto/AutoGuard/main/pictures/pantalla_monitoreo-2.jpg",
         ]}
-        tecnologies={["Android SDK", "Java", "MediaPipe", "MPAndroidChart"]}
+        technologies={["Android SDK", "Java", "MediaPipe", "MPAndroidChart"]}
       />
 
       <Project
@@ -25,7 +26,7 @@ export function ProjectsSection() {
           "https://raw.githubusercontent.com/IagoPorto/Dron-Firefly/main/dron2.png",
           "https://raw.githubusercontent.com/IagoPorto/Drone-Firefly/main/dron.jpg",
         ]}
-        tecnologies={[
+        technologies={[
           "C++",
           "Raspberry Pi",
           "Navio",
@@ -34,6 +35,7 @@ export function ProjectsSection() {
           "PID Control",
         ]}
       />
+      <ProjectSkeleton />
     </section>
   );
 }

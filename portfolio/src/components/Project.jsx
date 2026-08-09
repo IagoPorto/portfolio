@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./Project.css";
 
-export function Project({ name, description, url, photos = [], tecnologies }) {
+export function Project({ name, description, url, photos = [], technologies }) {
   const [current, setCurrent] = useState(0);
   const INTERVAL = 3000;
   useEffect(() => {
@@ -19,7 +19,7 @@ export function Project({ name, description, url, photos = [], tecnologies }) {
         <strong>Description:</strong> {description}
       </p>
       <p>
-        <strong>Stack:</strong> {tecnologies.join(", ")}
+        <strong>Stack:</strong> {technologies.join(", ")}
       </p>
       <a href={url} target="_blank" rel="noopener noreferrer">
         {photos.length > 0 && (
@@ -39,7 +39,7 @@ Project.propTypes = {
   description: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   photos: PropTypes.arrayOf(PropTypes.string),
-  tecnologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 Project.defaultProps = {
