@@ -109,7 +109,11 @@ const Globe3D = () => {
       renderer.render(scene, camera);
     };
 
-    animate();
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches) {
+      renderer.render(scene, camera);
+    } else {
+      animate();
+    }
 
     const handleResize = () => {
       if (!mountRef.current || !cameraRef.current || !rendererRef.current)
@@ -150,6 +154,8 @@ const Globe3D = () => {
   return (
     <div
       ref={mountRef}
+      role="img"
+      aria-label="3D rendered globe"
       style={{
         width: "100%",
         height: "56vh",

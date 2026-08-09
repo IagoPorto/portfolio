@@ -7,6 +7,7 @@ const ContactIcons = () => {
         href="https://github.com/IagoPorto"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="GitHub profile"
       >
         <FaGithub className="icon" />
       </a>
@@ -14,16 +15,18 @@ const ContactIcons = () => {
         href="https://www.linkedin.com/in/iagoportomontes/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
       >
         <FaLinkedin className="icon" />
       </a>
-      <a href="mailto:iagoportomontes@gmail.com">
+      <a href="mailto:iagoportomontes@gmail.com" aria-label="Send an email">
         <FaEnvelope className="icon" />
       </a>
       <a
         href="/portfolio/resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="View resume"
         title="Look at my resume"
       >
         <FaFileAlt className="icon" />

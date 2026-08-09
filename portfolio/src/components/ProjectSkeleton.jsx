@@ -35,6 +35,8 @@ export function ProjectSkeleton() {
   const [desc, setDesc] = useState([]);
 
   useEffect(() => {
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches)
+      return;
     let frame = 0;
 
     const interval = setInterval(() => {
@@ -63,14 +65,17 @@ export function ProjectSkeleton() {
   return (
     <div className="project skeleton hacker">
       <h3>
-        {title.map((c, i) => (
-          <span key={i} className="fade-char">
-            {c}
-          </span>
-        ))}
+        <span className="visually-hidden">Coming Soon...</span>
+        <span aria-hidden="true">
+          {title.map((c, i) => (
+            <span key={i} className="fade-char">
+              {c}
+            </span>
+          ))}
+        </span>
       </h3>
 
-      <p className="scramble-desc">
+      <p className="scramble-desc" aria-hidden="true">
         {desc.map((c, i) => (
           <span key={i} className="fade-char">
             {c}
@@ -78,7 +83,7 @@ export function ProjectSkeleton() {
         ))}
       </p>
 
-      <div className="project-photo skeleton-photo" />
+      <div className="project-photo skeleton-photo" aria-hidden="true" />
     </div>
   );
 }
